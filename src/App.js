@@ -24,12 +24,12 @@ class App extends React.Component {
     return (
       <div>
         <Nav />
-        <SingIn name={this.state.singIn} onClick={()=>{this.setState({check:!this.state.check})}} />
-        <SingUp name={this.state.singUp} onClick={()=>{this.setState({check:!this.state.check})}} />
-        {/* {this.state.check ?
+        {/* <SingIn name={this.state.singIn} onClick={()=>{this.setState({check:!this.state.check})}} />
+        <SingUp name={this.state.singUp} onClick={()=>{this.setState({check:!this.state.check})}} /> */}
+        {this.state.check ?
           <SingIn name={this.state.singIn} onClick={()=>{this.setState({check:!this.state.check})}} />
           :<SingUp name={this.state.singUp} onClick={()=>{this.setState({check:!this.state.check})}} />
-        } */}
+        }
       </div>
     );
   }
