@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Nav from './components/Nav.js'
+import SingIn from './components/SingIn.js'
+import SingUp from './components/SingUp.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      singUp:["暱稱","帳號", "密碼"],
+      singIn:["帳號", "密碼"],
+      check:true
+    };
+  }
+  //lifecycle
+  componentDidMount(){
+    console.log("Welcome~~")
+  }
+  componentDidUpdate() {
+    console.log("Update")
+  }
+  render(){
+    return (
+      <div>
+        <Nav />
+        <SingIn name={this.state.singIn} onClick={()=>{this.setState({check:!this.state.check})}} />
+        <SingUp name={this.state.singUp} onClick={()=>{this.setState({check:!this.state.check})}} />
+        {/* {this.state.check ?
+          <SingIn name={this.state.singIn} onClick={()=>{this.setState({check:!this.state.check})}} />
+          :<SingUp name={this.state.singUp} onClick={()=>{this.setState({check:!this.state.check})}} />
+        } */}
+      </div>
+    );
+  }
 }
 
 export default App;

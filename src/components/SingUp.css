@@ -1,0 +1,33 @@
+.singUp{
+    background-color: rgb(240, 240, 240);
+    margin: auto;
+    max-width: 400px;
+    width: 90%;
+    border-radius: 2%;
+}
+.singUpTitle{
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+}
+.singUpTitle span{
+    font-size: 40px;
+}
+.singUpTitle button{
+    font-size: 20px;
+}
+.singUpData{
+    margin: 10px 20px;
+    font-size: 30px;
+}
+.singUpData input{
+    font-size: 30px;
+    width: 95%;
+}
+.sumbit{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 30px;
+    margin: 20px 0px;
+}
