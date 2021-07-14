@@ -23,6 +23,13 @@
 .singUpData input{
     font-size: 30px;
     width: 95%;
+    display: block;
+}
+.singUpData .notice{
+    display: block;
+    font-size: 15px;
+    color: red;
+    text-align: center;
 }
 .sumbit{
     position: relative;
