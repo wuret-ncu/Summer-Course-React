@@ -15,6 +15,10 @@ function Data(props) {
 function SingIn(props){
     const dataList = props.name.map(value =>
         <Data key={value} name={value}/>)
+    function handleClick(e){
+        console.log(e);
+        // console.log(nativeEvent)
+    }
     return(
         <div className="singIn">
             <div className="singInTitle">
@@ -22,7 +26,7 @@ function SingIn(props){
                 <button onClick={props.onClick}>未註冊</button> 
             </div>
             {dataList}
-            <button type="submit" className="sumbit">送出</button>
+            <button type="submit" className="sumbit" onClick={handleClick}>送出</button>
         </div>
     )
 }

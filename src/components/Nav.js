@@ -3,7 +3,7 @@ import './Nav.css'
 
 function Nav(props){
     return(
-        <div className="nav">Welcome!</div>
+        <div className="nav">Welcome~</div>
     )
 }
 
