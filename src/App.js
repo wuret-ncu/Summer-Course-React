@@ -1,8 +1,13 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MyRef from './MyRef.js'
 import MyRef2 from './MyRef2.js'
 
+import {HashRouter,Route,Switch,Link} from "react-router-dom";
+import FirstPage from './FirstPage';
+import SecondPage from './SecondPage';
+
+// Ref
 class App extends React.Component {
   // 創建 ref
   myRef = React.createRef();
@@ -39,3 +44,43 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+
+
+// react-router-dom
+// function Layout(props){
+//   const[check,setCheck]=useState(false)
+//   // const handleClick = () =>{
+//   //   if(check)
+//   //    轉跳
+//   //     setCheck(!check,document.location.href="http://localhost:3000/#/second")
+//   //   else
+//   //     setCheck(!check,document.location.href="http://localhost:3000/#/")
+//   // }
+//   return(
+//       <>
+//           <nav>
+//             {check? <Link to="/" onClick={()=>{setCheck(!check)}}>Click</Link> : 
+//             <Link to="/second"  onClick={()=>{setCheck(!check)}}>Click</Link>}
+//             {/* <button onClick={handleClick}>Click Me</button> */}
+//           </nav> 
+//           { props.children }
+//       </>
+//   )
+// }
+// function App(){
+//   return( 
+//     <HashRouter>
+//       <Switch>
+//         <Layout>
+//           {/* <Route exact={true} path="/" component={FirstPage}/> */}
+//           {/* 在localhost:3000/#/second時會出問題 */}
+//           <Route path="/" component={FirstPage}/>
+//           <Route path="/second" component={SecondPage}/>
+//         </Layout>
+//       </Switch>
+//     </HashRouter>
+//   );
+// }
+// export default App;
