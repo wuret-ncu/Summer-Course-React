@@ -7,6 +7,9 @@ import {HashRouter,Route,Switch,Link} from "react-router-dom";
 import FirstPage from './FirstPage';
 import SecondPage from './SecondPage';
 
+import OpenContext from './ContextTest.js'
+import ContextButton from './ContextButton.js';
+
 // Ref
 class App extends React.Component {
   // 創建 ref
@@ -46,8 +49,7 @@ class App extends React.Component {
 export default App;
 
 
-
-
+//------------------------
 // react-router-dom
 // function Layout(props){
 //   const[check,setCheck]=useState(false)
@@ -81,6 +83,21 @@ export default App;
 //         </Layout>
 //       </Switch>
 //     </HashRouter>
+//   );
+// }
+// export default App;
+
+//------------------------
+//context
+// function App (){
+//   const [isOpen, setIsOpen] = useState(true);
+//   return (
+//     <OpenContext.Provider value={{ 
+//         openContext: isOpen, 
+//         setOpenContext: setIsOpen
+//     }} >
+//         <ContextButton />
+//     </OpenContext.Provider>
 //   );
 // }
 // export default App;
