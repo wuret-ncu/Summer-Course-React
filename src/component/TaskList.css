@@ -1,0 +1,14 @@
+.task{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.task button{
+    display: block;
+}
+hr{
+    height:1px; 
+    border:none;
+    background-color: rgb(211, 212, 214);
+}

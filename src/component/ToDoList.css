@@ -1,0 +1,59 @@
+.toDoListNav{
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+.navTitle{
+    font-size: 25px;
+    color: #1877f2;
+    font-weight: bolder;
+    padding: 0px 10px;
+}
+.navInfo{
+    font-size: 25px;
+}
+.navInfo span{
+    padding: 0px 10px;
+}
+.toDoListItem{
+    max-width: 500px;
+    width: 90%;
+    min-width: 400px;
+    margin: 30px auto;
+    padding: 10px ;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    font-size: 20px;
+}
+.itemButton{
+    display: flex;
+    justify-content: space-between;
+}
+.itemButton div{
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+}
+.addItem{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.addItem input{
+    display: block;
+    border-radius: 3px;
+    font-size: 20px;
+    width: 88%;
+    border: 1px solid #dddfe2;
+}
+.addItem button{
+    display: block;
+    font-size: 20px;
+    width: 10%;
+
+}

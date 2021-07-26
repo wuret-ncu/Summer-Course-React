@@ -1,0 +1,21 @@
+.singupTitle{
+    font-size: 20px;
+}
+.singupNotice{
+    color: #f02849;
+    font-size: 14px;
+}
+.submitButton{
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 21px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 364px;
+    color: white;
+}
+.singinButton{
+    cursor: pointer;
+    color: #1877f2;
+}

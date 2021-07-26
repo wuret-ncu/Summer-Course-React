@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import {HashRouter,Route,Switch,Link,Redirect} from "react-router-dom";
+import Home from "./component/Home";
+import ToDoList from './component/ToDoList';
+import CheckContext from './component/CheckContext'
 import './App.css';
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [check, setCheck] = useState(true); //拉到context
+  const [userName, setUserName] = useState("")
+  return(
+    <>
+      <HashRouter>
+        <CheckContext.Provider value={{
+          check: check,
+          setCheck: setCheck,
+          userName: userName,
+          setUserName: setUserName
+        }}>
+          <Route exact path='/'> {!check ? <Redirect to="/todolist" /> : <Home />} </Route>
+          <Route path="/todolist">
+            {check ? <Redirect to="/" /> : <ToDoList />}
+          </Route>
+        </CheckContext.Provider>
+      </HashRouter>
+    </>
+  )
 }
 
 export default App;

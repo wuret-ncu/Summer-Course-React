@@ -1,0 +1,21 @@
+.loginTitle{
+    font-size: 20px;
+}
+.loginNotice{
+    color: #f02849;
+    font-size: 14px;
+}
+.loginButton{
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 21px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 364px;
+    color: white;
+}
+.singupButton{
+    cursor: pointer;
+    color: #1877f2;
+}
